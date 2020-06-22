@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos em JavaScript</title>  
+    <style>
+        body{
+            background-color:aliceblue;
+    }
+    </style>
+</head>
+<body>
+    <h1>Aula 1 - métodos write,alert,prompt e confirm em Javascript</h1>
+
+    <script>
+    //script pode ser carregador no head,body ou até mesmo em arquivo separado, depende de sua organização.
+    //escreva na tela(document.write) aceita os tipos string,int,float ou mesmo objeto e variavel
+        const nome = "João"
+        const separador="-"
+        const quebraLinha="\n" // \n serve para pular linha dentro de uma window no caso 'alert'
+        var somaInteiro = 10+30
+        var subtracaoReal = 5-2.3
+        var ano = 2020
+        alert('Desenvolvedor: '+nome+quebraLinha+'Ano: '+ano+quebraLinha+"Bons Estudos ")
+        var texto = '<br>Desenvolvedor: '+nome+"<br>Ano: "+ ano
+        document.write("valor de PI: ",Math.PI) //função pi da bilioteca Math
+        document.write("<br>CFB Cursos")
+        document.write('<br>10+30 = '+somaInteiro) //exemplo concatenação utilizando html
+        document.write('<br>5-2.3 = '+ subtracaoReal)
+        document.write(texto)
+        
+        //¹ parametro texto da pergunta, ² parametro texto previo
+        var usuario=prompt("Digite o nome do usuario"," Digite seu nome") 
+        alert("Bem Vindo: "+usuario+" !") //alert com a informação colhida acima
+        document.write("<br>Usuario:"+usuario)
+
+        //confirm utilizado para testes lógicos/booleanos
+        var resposta = confirm("Deseja Continuar ?")
+        document.write("<br>"+resposta)
+        
+    </script>
+    
+</body>
+</html>
