@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de decisão 1</title>
+    <script>
+        var v1 = 10
+        var v2= 15 
+
+        if (v1>5 && v1 <11) {
+            document.write("<br>teste logico &&(and) "+v1+' é > 5 e < 11')
+        }
+
+        if (v2>50 || v2 > v1) {
+            document.write("<br>teste logico ||(or) "+v2+' é > 50 ou >' +v1+"<br>")
+        }
+        //teste de estrutura de decisão com if aninhado dentro de else if
+        var nota1=5
+        var nota2=0
+        var media=(nota1+nota2)/2
+        var maiorNota;
+        var resultado;
+        
+        if (media>= 6) {
+            document.write("parabens você passou sua média foi: "+media)
+        } else if(media<6 && (nota1 || nota2)>=1) {
+            if (nota1>nota2) {
+                maiorNota=nota1
+            }else{
+                maiorNota=nota2
+            }
+            document.write("ficou de recuperação, sua média é: "+media+" e sua maior nota: "+maiorNota+ " será mantida e fara outra avaliação:")
+        }else{
+            document.write("sua média é: "+media+" infelizmente você reprovou sem chances de recuperação suas notas foram: "+nota1+" e "+nota2)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
