@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estruturas de Decisão 2</title>
+    <script>
+        //estrutura de switch é utilizada quando os resultados são todos pré concebidos
+        var n1=prompt("teste se o segundo numero é multiplo do primeiro","Digite o primeiro numero") 
+        var n2=prompt("teste se o segundo numero é multiplo do primeiro","Digite o segundo numero") 
+        var resultado = n2 % n1
+        switch (resultado) {
+            case 0:
+                document.write(n2," é multiplo de: ",n1)
+                break;
+        
+            default:
+            document.write(n2," não é multiplo de: ",n1)
+                break;
+        }
+        //exemplo de pontuação de um jogo utilizando if,else e switch
+
+        var pos,msg,pontos
+
+        pontos=1001
+
+        if (pontos >= 1000) {
+            pos = 1
+        } else if(pontos >= 800){
+            pos = 2
+        } else if(pontos >= 600){
+            pos = 3
+        }else{
+            pos = 0
+        }
+
+        switch (pos) {
+            case 1:
+                msg="<br>Primeiro Lugar<br>Medalha de Ouro"
+                break;
+            
+            case 2:
+                msg="<br>Segundo Lugar<br>Medalha de Prata"
+            break;
+
+            case 3:
+                msg="<br>Terceiro Lugar<br>Medalha de Bronze"
+            break;
+        
+            default:
+                msg="<br>Não foi ao pódio<br>Não Obteve Medalha"
+                break;
+        }
+
+        switch (pos) {
+            case 1:
+            case 2:
+            case 3:
+            msg+="<br>Subiu ao pódio"
+                break;
+        
+            default:
+            msg+="<br>Não obteve colocação"
+                break;
+        }
+
+        document.write(msg)
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
