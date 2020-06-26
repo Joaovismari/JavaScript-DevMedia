@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 2 Busca e Junção</title>
+    <script>
+        var mochila=[],pos;
+        //a declaração dos elementos adiconados com os métodos push e unshift
+        //podem ser feitas de forma individual ou com multiplos itens de forma Crescente
+        mochila.push("Pederneira","Chave","Lanterna","Pedra")
+        mochila.unshift("Faca","Corda")
+        //indexOf retorna o indice que o item pesquisado esta armazenado
+        //se o item não estiver armazenado o retorno é -1
+        var item=prompt("Que Item deseja retirar da mochila?")
+        pos=mochila.indexOf(item)
+        
+        if (pos == -1) {
+            document.write("Ítem não está na mochila")
+        } else {
+            document.write("Ítem está na mochila<br>Posição: "+pos)
+        }
+
+        var float=[2.2,3.3,4.1]
+        var num=[0,4,3,2];
+        document.write("<br>Vetor na ordem de declaração<br>")
+        document.write(num[0]+"<br>")
+        document.write(num[1]+"<br>")
+        document.write(num[2]+"<br>")
+        document.write(num[3]+"<br>")
+        document.write("<br>Vetor ordenado pelo método sort<br>")
+        num.sort();
+        document.write(num[0]+"<br>")
+        document.write(num[1]+"<br>")
+        document.write(num[2]+"<br>")
+        document.write(num[3]+"<br>")
+        document.write("<br>Vetor ordenado pelo método reverse<br>")
+        num.reverse();
+        document.write(num[0]+"<br>")
+        document.write(num[1]+"<br>")
+        document.write(num[2]+"<br>")
+        document.write(num[3]+"<br>")
+        //método join serve para copiar os elementos de um vetor
+        document.write("<br>Uso do método join")
+        numeros=num.join();
+        document.write("<br>"+numeros)//impressão do vetor inteiro
+        document.write("<br>"+numeros[2])//impressão de elemento do vetor numeros
+        document.write("união de todos os elementos dos vetores utilizando metodo concat")
+        vetores=float.concat(num,mochila);
+        document.write("<br>"+vetores);
+        document.write("<br>Tamanho do indice vetores que é a união dos demais: "+ vetores.length+" Posições");
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

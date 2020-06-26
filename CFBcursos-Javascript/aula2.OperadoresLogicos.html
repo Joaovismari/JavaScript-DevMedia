@@ -7,12 +7,20 @@
     <script>
         var v1 = 10
         var v2= 15 
-
+        // && simbolo para and
         if (v1>5 && v1 <11) {
             document.write("<br>teste logico &&(and) "+v1+' é > 5 e < 11')
         }
-
+        // || simbolo para or
         if (v2>50 || v2 > v1) {
+            document.write("<br>teste logico ||(or) "+v2+' é > 50 ou >' +v1+"<br>")
+        }
+        // != simbolo para diferente
+        if (v2 != v1) {
+            document.write("<br>teste logico ||(or) "+v2+' é > 50 ou >' +v1+"<br>")
+        }
+        // == simbolo para comparação de igualdade diferente de apenas '=' que seria de atribuição
+        if (v2 == v1) {
             document.write("<br>teste logico ||(or) "+v2+' é > 50 ou >' +v1+"<br>")
         }
         //teste de estrutura de decisão com if aninhado dentro de else if
