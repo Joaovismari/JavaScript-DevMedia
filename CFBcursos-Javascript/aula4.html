@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays inserção e remoção de elementos</title>
+    <script>
+        //arrays com declaração de items e sem declaração
+        var itens =["Caderno","Estojo","Desodorante","Kit dental"];
+        var mochila=[];
+        //push insere elemento no final do array
+        document.write("<br>Usos de Push:<br>")
+        itens.push("Carteira")//armazenado string
+        itens.push("Crachá")
+        itens.push("Dinheiro")
+        mochila.push(2)//armazenado numero
+        mochila.push(3)
+        mochila.push(4)
+        mochila.push(0)
+
+        
+
+        document.write(itens[mochila[0]]+"<br>")//os numeros armazenados no array mochila se tornaram referencias para o array de items
+        document.write(itens[mochila[1]]+"<br>")
+        document.write(itens[mochila[2]]+"<br>")
+        
+
+        //unshift insere o elemento no inicio do array
+        document.write("<br>Antes Uso de UnShift:<br>")
+        document.write(itens[0]+"<br>")
+        itens.unshift("Jaqueta")
+        document.write("<br>Uso de UnShift:<br>")
+        document.write(itens[0]+"<br>")
+
+        //shift apaga o elemento no inicio do array
+        document.write("<br>Antes Uso de Shift:<br>")
+        document.write(itens[0]+"<br>")
+        itens.shift()
+        document.write("<br>Uso de Shift:<br>")
+        document.write(itens[0]+"<br>")
+
+        //pop apaga o elemento no final do array
+        document.write("<br>antes Uso de Pop:<br>")
+        document.write(itens[6]+"<br>")
+        itens.pop()
+        document.write("<br>Uso de Pop:<br>")
+        document.write(itens[6]+"<br>")
+
+        //splice apaga os elementos a partir de 2 parametros(posição,quantidade de items a ser removida)
+        document.write("<br>Antes do Uso de Splice:<br>")
+        document.write(itens[3]+"<br>")
+        document.write(itens[4]+"<br>")
+        document.write(itens[5]+"<br>")
+        itens.splice(3,3)
+        document.write("<br>Uso de Splice:<br>")
+        document.write(itens[3]+"<br>")
+        document.write(itens[4]+"<br>")
+        document.write(itens[5]+"<br>")
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
