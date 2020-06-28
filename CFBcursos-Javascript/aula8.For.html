@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 8 Ciclos de Repetição usos de for e while</title>
+    <title>Aula 8 Ciclos de Repetição usos de for</title>
     <script>
         var num=[];
         
@@ -15,7 +15,18 @@
             document.write(num[cont]+"<br>")
             
         }
-        document.write("vetor de forma organizada: ",num.sort())
+        document.write("vetor de forma organizada: ",num.sort()+"<br>")
+        document.write("vetor de forma reversa: ",num.reverse()+"<br>")
+
+        var mochila=[["Corda",1],["Cura",1],["Lanterna",1],["Pilhas",20]]
+        
+        for (var l = 0; l<4; l++) {
+            for (var c = 0; c<2; c++){
+                document.write(mochila[l][c]+" ")
+            }
+            document.write("<br>")
+            
+        }
     </script>
 </head>
 <body>
