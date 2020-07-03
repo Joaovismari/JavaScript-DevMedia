@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 11 getElementById</title>
+    
+</head>
+<body>
+    <p id="texto">CFB Cursos</p>
+    <input type="text" id="cxtexto" value="teste">
+    <div id="caixa"></div>
+    
+    <script>
+        //a formatação só funcionara se o elemento apontado pelo getElementById já estiver sido declarado
+        //getElementById tem a função de apontar um elemento no html
+        //nos exemplos abaixo utilizamos a formatação em css colocando o elemento apontado dentro de uma variavel
+        //essa formatação utilizando css dentro do script de JavaScript Facilita edições simples
+        var txt=document.getElementById("texto")
+        txt.style.color="red"
+        txt.style.fontSize="50px"
+
+        //é possivel utilizar multiplas variaveis armazenando os valores obtidos via um mesmo id e aplicar formatações
+        //utilizando o comando innerHTML para modificar seu conteudo ou transformar em tipo string na nova variavel
+        //ao utilizar .innerHTML sem sinal de igualdade o valor é capturado, com igualdade é atribuido um novo valor
+        var titulo=document.getElementById("texto").innerHTML;
+        alert(titulo)
+        
+
+        var cxt=document.getElementById("cxtexto").value="Curso de JavaScript"
+        alert(cxt)
+
+        
+
+        var cx=document.getElementById("caixa")
+        cx.style.border="1px solid #000"
+        cx.style.width="300px"
+        cx.style.height="300px"
+        cx.style.marginTop="10px"
+        cx.style.backgroundColor="#aaa"
+    </script>
+</body>
+</html>
