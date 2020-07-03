@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 10 Tratamento de Erros</title>
+    <script>
+        //a estrutura sera testada no bloco try e passada como referencia para o catch
+        //aonde será executado o bloco dentro do catch
+
+        var num;//Máximo 10
+
+        try {//throw new se trata de uma excessão especifica para relatar um novo erro ao realizar a verificação 
+        //de condicional dentro do try
+            num =prompt("Digite um Valor de zero à 10");
+            if (num>10 || num<0) {
+                throw new Error("Valor Inválido, o valor passado deve ser >=0 e <= 10")
+            }
+            
+        } catch (error) {//catch recebe o erro gerado no try através do throw por referência
+            document.write("ERRO: "+error.message)
+            console.log("ERRO: "+error.message)//imprime no log, lembrando que o erro se trata de uma variavel propria agora
+            if (num>10) {
+                num=10;
+                document.write("<br>Valor passado é maior que 10,alterado para valor máximo permitido: ")
+            }else{
+                num=0;
+                document.write("<br>Valor passado é menor que 0,alterado para valor mínimo permitido: ")
+            }
+        }finally{//o finaly é opcional após tratarmos o erro com o catch,ele é sempre executado após o bloco de try
+            document.write("Valor: "+num)
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
