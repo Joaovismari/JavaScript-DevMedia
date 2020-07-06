@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 12 getElementsByTagName</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <h2>CFB Cursos</h2>
+    <p>Curso de JavaScript</p>
+    <h2>Aula 12</h2>
+    <p>https://www.youtube.com/watch?v=gP0_rmzpKEc&list=PLx4x_zx8csUj3IbPQ4_X5jis_SkCol3eC&index=25</p>
+    <p>cfbcursos.com.br</p>
+
+    <hr/>
+
+    <script>
+        //seleciona os elementos pela tag e armazena em um vetor
+        var tagsP=document.getElementsByTagName("p");
+        //utilizada estrutura for para formatar utilizando css inline
+        for (let index = 0; index < tagsP.length; index++) {
+            tagsP[index].style.color="red"
+        }
+        //retorna os dados com inner html ou atribui um novo valor
+        document.write(tagsP[1].innerHTML);
+        document.write(tagsP[2].innerHTML="novo texto");
+    </script>
+
+</body>
+</html>
