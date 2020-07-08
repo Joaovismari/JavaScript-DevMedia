@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 13 querySelectorAll</title>
+    <style>
+        .titulo{
+            color: #f00;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+        div{
+            border: 1px solid #000;
+            padding: 10px;
+            display: inline-block;
+        }
+        a{
+            display: block;
+        }
+        .quadro{
+            background-color:#ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="titulo">querySelectorAll</h1>
+    <p>o querySelectorAll() é um método que retorna os elementos do documento que correspondem à uma classe de CSS
+        ou a uma tag específica.
+    </p>
+    <h2 class="titulo">Curso de JavaScript</h2>
+    <p>https://www.youtube.com/channel/UCqHIWCQSq0yeE-1nbcRnt2w</p>
+    <p class="titulo">cfbcursos.com.br</p>
+    <div>
+        <h1>Curso de JavaScript</h1>
+        <p>esse texto está dentro de uma div</p>
+        <p>este também</p>
+    </div>
+    <div class="quadro">
+        <h1>Curso de JavaScript</h1>
+        <p>esse texto está dentro de uma div</p>
+        <p>este também</p>
+    </div>
+
+    <a href="https://www.youtube.com/channel/UCqHIWCQSq0yeE-1nbcRnt2w" target="_blank">Canal</a>
+    <a href="http://cfbcursos.com.br/" target="_blank">Site</a>
+    <hr>
+    
+    
+    
+    <script>
+        //o seletor querySelectorAll pode ser utilizado para class,id ou elementos filhos ">" e até mesmo todos *
+        //tambem é possivel selecionar multiplas tags,ids,ou class ao mesmo tempo separadas por virgula
+        var elementos= document.querySelectorAll(".titulo");
+        elementos[0].style.color="blue";
+        for (let index = 0; index < elementos.length; index++) {
+            document.write(elementos[index].innerHTML+"<br>");
+        }
+        
+
+        var elementos1= document.querySelectorAll("p.titulo");
+        for (let index = 0; index < elementos1.length; index++) {
+            document.write(elementos1[index].innerHTML+"<br>");
+        }
+
+        var elementos2= document.querySelectorAll("h2.titulo");
+        for (let index = 0; index < elementos2.length; index++) {
+            document.write(elementos2[index].innerHTML+"<br>");
+        }
+
+        var elementosdiv= document.querySelectorAll("div.quadro>*");
+        for (let index = 0; index < elementosdiv.length; index++) {
+            elementosdiv[index].style.color="green";
+        }
+
+        
+
+
+       
+    </script>
+</body>
+</html>
