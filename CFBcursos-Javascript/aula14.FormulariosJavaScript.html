@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        label{
+            display: block;
+        }
+        input{
+            display: block;
+        }
+        input[type=submit],label{
+            margin-top: 10px;
+        }
+    </style>
+    <title>Aula 15 Manipulação de Formularios</title>
+</head>
+<body>
+    <form name="curso1" id="curso1" action="#" method="POST">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste" value="primeiro -1">
+        <label>Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar">
+    </form>
+    <hr>
+    <form name="curso2" id="curso2" action="#" method="POST">
+        <label>Nome</label>
+        <input type="text" name="fNome" id="teste" value="segundo -2">
+        <label>Senha</label>
+        <input type="password" name="fSenha" value="123">
+        <input type="submit" name="btEnviar" value="Enviar">
+    </form>
+
+    <hr>
+
+    <script>
+        //.forms aponta para os forms da pagina que são armazenados em forma de vetor sendo possivel retornar
+        //valores como id,name,o proprio formulario com innerHTML ,lenght entre outros
+        //forms aceita tanto o indice como o id para referência
+        var fm=document.forms[0].id;
+        document.write(fm+"<br><br>");
+        //o mesmo pode ser feito com forms.item sendo a difereça apontado com parenteses
+        var fi=document.forms.item(1).id;
+        document.write(fi+"<br><br>");
+        //o mesmo pode ser feito com forms.NamedItem sendo o valor passado por referência o valor do id do formulario
+        var fnam=document.forms.item("curso1").id;
+        document.write(fnam+"<br><br>");
+
+        //Manipulando elementos dentro do formulario, labels não contam sendo assim o 
+        //os indices são contados pelo numero de inputs, para retornar o value do input name por exemplo: 
+        var fmvalue=document.forms[0].elements[0].value
+        document.write(fnam+"<br><br>");
+
+        //manipulando formularios exemplo simples armazenando forms em uma variavel e elements em outra
+        var f2 =document.forms[1];
+        var el = f2.elements;
+        for (let index = 0; index < el.length; index++) {
+            el[index].style.backgroundColor="#ddd";
+            
+        }
+        //como retornar o valor de um elemento DENTRo de um form utilizando getElementById
+        //passe como referencia, id,indice e value à ser retornado
+        document.write(document.getElementById("curso1").elements[0].value)
+        
+        
+
+    </script>
+</body>
+</html>
