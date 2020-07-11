@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 15 data e hora</title>
+</head>
+<body>
+    <script>
+        // a classe Date por si só retorna a data atual conforme o horario e localização registradas no sistema
+        document.write(Date());
+        document.write("<hr>")
+        //a manipulação da mesma se dá através da atribuição de variaveis contendo-a
+
+        var dt = new Date();
+        // exemplo de manipulação de data = dt.setFullYear(dt.getFullYear()+3);
+        document.write(dt.toLocaleDateString(),"<br>"); // data padronizada
+        document.write(dt.toLocaleTimeString(),"<br>"); //horario
+        document.write(dt.toDateString(),"<br>"); //formato americano
+        document.write(dt.getDate(),"<br>"); // os metodos get especificos como date,hour,minute entre outros 
+        //retornam um dado especifico
+        document.write(dt.getMonth()+1,"<br>"); //os meses são em formato de vetor ou seja vão de 0 à 11 para resolver
+        //acrescente 1 ao método getMouth
+
+        //trabalhando com datas e arrays
+        var dia=dt.getDate()
+        var mes=dt.getMonth()
+        var ano=dt.getFullYear()
+        var diaDaSemana=dt.getDay()
+
+        var meses= new Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro")
+        var diasDaSemana = new Array("Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sabado")
+
+        document.write(diasDaSemana[diaDaSemana]+", ",dia," de "+meses[mes]+" de "+ano+"<hr>")
+        
+    </script>
+</body>
+</html>
