@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 16 Utilizando funções math()</title>
+    <script>
+        //o método Math tem diversas funções ainda não especificadas neste documento
+        const pi = Math.PI
+        document.write(pi+"<br>")
+        document.write(Math.pow(2,6)+"<br>") //potenciação base,expoente
+        document.write(Math.sqrt(9)+"<br>") //raiz quadrada
+        document.write(Math.E+"<br>") //EULER
+        document.write(Math.SQRT1_2+"<br>")//raiz quadrada de 1/2
+        document.write(Math.SQRT2+"<br>")//raiz quadrada de 2
+        //uso do método random
+        document.write(Math.random()+"<br>")//vazio gera valores entre 0 e 1
+
+        //multiplicando o valor randomico pelo grau de variação e o arredondando
+        document.write(Math.round(Math.random()*10)+"<br>")
+
+        var angulo=45;
+
+        var c=Math.cos(angulo*Math.PI/180)
+        var s=Math.sin(angulo*Math.PI/180)
+
+        document.write("sendo o valor do angulo: "+angulo+"<br>Cosseno: "+c+"<br>Seno: "+s)
+        //valor min e valor max
+        var valorMin=Math.min(1,11,5,6,9,-52,1,02,22,00,0)
+        var valorMax=Math.max(1,11,5,6,9,-52,1,02,22,00,0)
+        document.write("<br>"+valorMin+"<br>"+valorMax)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

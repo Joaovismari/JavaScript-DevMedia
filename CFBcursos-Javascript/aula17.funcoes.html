@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 17 Funções</title>
+    <script>
+        //exemplos de funções em JavaScript
+        //função sem retorno
+        function soma(n1,n2){
+            var res=((n1+n2)+"<br>");
+            document.write(res);
+        }
+        //função com retorno direto
+        function multiplica(n1,n2) {
+            return n1*n2;
+        }
+        //funcao com retorno de variavel
+        function divide(n1,n2) {
+            res = n1/n2;
+            return res
+        }
+        document.write(multiplica(3,9)+"<br>")
+        document.write(divide(9,3)+"<br>")
+        soma(5,3);
+        soma(15,3);
+        soma(99,33);
+        document.write("<hr>")
+
+        var numeros=new Array(5,99,5,8,74,20,00,1);
+
+        function media(nums){
+            var tam = nums.length;
+            var soma= 0;
+            for (var i = 0; i<tam; i++){
+                soma+=nums[i];
+            }
+            return Math.round(soma/tam);
+        }
+        document.write(media(numeros));//passando como referencia o array numeros declarado acima
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
