@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 18 Escopo de Variáveis</title>
+    <script>
+
+        var nomeCor="Vermelho"//valor inicial
+        function cor() {
+            var nomeCor= "Azul"  // nova variável com mesmo nome em outro bloco
+            document.write(this.nomeCor+"<br>"+nomeCor+"<br>")
+        }//é possivel ainda referenciar a variavel dentro do escopo utilizando o 
+         //método this
+
+        cor();//retorna o valor armazenado em nomeCor dentro do escopo da função cor
+        document.write(nomeCor+"<br>")
+
+        /*a variavel nomeCor pode armazenar valores diferentes dentro e fora do escopo e retorna-los de acordo
+        devido à mesma ser declarada em blocos distintos dentro e fora do escopo, no exemplo abaixo o valor 
+        seria substituidopois nomeCor teria uma atribuição diferente dentro do mesmo bloco, é 
+        possivel declarar variaveis com mesmo nome
+         em blocos diferentes do código, 
+        */
+
+        nomeCor="Verde"//novo valor atribuido
+        document.write(nomeCor+"<br>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
