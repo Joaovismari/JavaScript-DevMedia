@@ -10,7 +10,7 @@
             width: 100px;
             height: 100px;
             border: 1px solid #000;
-            background-color: #f00;
+            background-color: #fff;
             position: absolute;
             left: 0px;
             top: 0px;
@@ -44,6 +44,11 @@
                 alert("Evento Removido");
                 this.removeEventListener("keydown",move)
             }
+
+            function cor(obj,cor) {
+            
+            obj.style.backgroundColor=cor;
+        }
         }
         //escutador abaixo
         function funciona(){
@@ -54,7 +59,8 @@
 </head>
 
 <body>
-    <div id="dv1" onclick="funciona(),alert('Evento Keydown Ativado')"></div>
+    <div id="dv1" onclick="funciona(),alert('Evento Keydown Ativado')">
+    <p>eeeeeeeeeeee</p></div>
 </body>
 
 </html>

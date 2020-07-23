@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 22 setTimeOut e setInterval</title>
+    <style>
+         #dv1 {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            background-color: #fff;
+            
+        }
+    </style>
+    <script>
+
+        var interval;
+        function mudaCor() {
+            var obj= document.getElementById('dv1');
+            var r = Math.floor(Math.random()*255);
+            var g = Math.floor(Math.random()*255);
+            var b = Math.floor(Math.random()*255);
+            obj.style.backgroundColor="rgb("+r+","+g+","+b+")";
+           
+        }
+        function iniciar() {
+            interval=setInterval(mudaCor,600)
+        }
+
+        function parar() {
+            clearInterval(interval);
+            //serve para interromper o intervalo definido anteriormente, mantendo o valor atual da variavel
+        }
+        function addEventos() {
+        document.getElementById('bt1').addEventListener('click',iniciar);
+        document.getElementById('bt2').addEventListener('click',parar);
+        }
+        
+        
+        //interval é ativada diversas vezes sendo os parametros função e intervalos de tempo entre às ativações
+
+        //var timeOut= setTimeout(mudaCor,1000)
+        //time out é ativada uma vez sendo os parametros, função à ser ativada e tempo até á ativação
+
+        window.addEventListener('load',addEventos)
+        //ativação simples ao carregar à pagina
+    </script>
+</head>
+<body>
+    <div id="dv1"></div>
+    <h2>Troca cores da div</h2>
+    <button id="bt1">Iniciar</button>
+    <button id="bt2">Parar</button>
+</body>
+</html>
