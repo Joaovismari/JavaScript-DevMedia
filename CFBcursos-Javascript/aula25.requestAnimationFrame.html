@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 25 requestAnimationFrame</title>
+    <style>
+        #jogador{
+            width: 60px;
+            height: 60px;
+            background-color: rgb(15, 238, 164);
+            position: absolute;
+            left: 120px;
+            top: 60px;
+        }
+    </style>
+    <script>
+        var jog;
+        var vel;
+        var dx;
+        var dy;
+        var px;
+        var py;
+        var anima;
+        var estado;
+
+        function inicia() {
+            vel=2;
+            dx=1;
+            dy=0;
+            px=0;
+            py=0;
+            estado=1;//1 = movendo, 0 = parado
+            jog=document.getElementById('jogador');
+            jog.addEventListener('click',moverParar);
+            document.getElementById("btIni").addEventListener('click',mover);
+            document.getElementById("btPar").addEventListener('click',parar);
+            game();
+        }
+
+        function moverParar() {
+            if (estado) {
+                estado=0;
+                jog.style.backgroundColor="#f00";
+                cancelAnimationFrame(anima);//a variavel anima requisitou a animação logo ela é o parametro para
+                //cancelamento
+            }else{
+                estado=1;
+                jog.style.backgroundColor="#00f";
+                anima=requestAnimationFrame(game);
+            }
+        }
+        
+        function mover() {
+            if (!estado) {
+                estado=1;
+                jog.style.backgroundColor="#00f";
+                anima=requestAnimationFrame(game);
+            }
+        }
+
+        function parar() {
+            if (estado) {
+                estado=0;
+                jog.style.backgroundColor="#f00";
+                cancelAnimationFrame(anima);
+            }
+        }
+
+        function game() {
+            px+=dx*vel;
+            py+=dy*vel;
+            jog.style.left=px+"px";
+            if (px>800) {
+                dx=-1;
+            } else if(px<120) {
+                dx=1;
+            }
+            anima=requestAnimationFrame(game);
+        }
+
+        window.addEventListener("load",inicia);
+    </script>
+</head>
+<body>
+    <div id="jogador"></div>
+    <button id="btIni">Iniciar</button>
+    <button id="btPar">Parar</button>
+</body>
+</html>

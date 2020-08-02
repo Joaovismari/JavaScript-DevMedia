@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #clock {
+            margin: 10px 10px;
+            position: absolute;
+            text-align: center;
+            color: #0f0;
+            font-weight: bold;
+            font-size: 30px;
+            width: 130px;
+            background-color: #000;
+        }
+    </style>
+    <title>Relógio em JavaScript</title>
+    <script>
+        function relogio() {
+            var data = new Date();
+            var hora = data.getHours();
+            var minuto = data.getMinutes();
+            var segundo = data.getSeconds();
+            //como se tratam de condicionais independentes não há necessidade de if else ou else
+            if (hora < 10) {
+                hora = "0" + hora;
+            }
+
+            if (minuto < 10) {
+                minuto = "0" + minuto;
+            }
+
+            if (segundo < 10) {
+                segundo = "0" + segundo;
+            }
+            //a variavel horas armazenou o valor horario concatenado abaixo
+            var horas = hora + ":" + minuto + ":" + segundo;
+            //o input "clock" recebeu o value da variavel horas para exibicação
+            document.getElementById("clock").value = horas;
+        }
+        //a variavel tempo é acionada após 1 segundo conforme a função setInterval que chama a função relogio
+        var tempo = setInterval(relogio, 1000);
+
+    </script>
+
+</head>
+
+<body>
+    <header>Relógio Simples em JavaScript</header>
+    <main>
+        <input type="text" name="" id="clock">
+    </main>
+</body>
+
+</html>
